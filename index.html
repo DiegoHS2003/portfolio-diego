@@ -6,25 +6,24 @@
   <title>Diego Henrique | Desenvolvedor Front-end</title>
   <meta name="description" content="Portfólio de Diego Henrique, desenvolvedor front-end de 23 anos, estudante de Análise e Desenvolvimento de Sistemas na UNIP Alphaville." />
   <meta property="og:title" content="Diego Henrique | Desenvolvedor Front-end" />
-  <meta property="og:description" content="Interfaces modernas, responsivas e feitas com cuidado. Veja meus projetos." />
-  <meta property="og:image" content="img/diego-700.jpg" />
-  <meta name="theme-color" content="#100f0d" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23100f0d'/><text x='50%25' y='62%25' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23ece8e0'>DH</text></svg>" />
+  <meta property="og:description" content="Crio interfaces bonitas, rápidas e acessíveis. Veja meus projetos." />
+  <meta property="og:image" content="img/diego-avatar.jpg" />
+  <meta name="theme-color" content="#0e0f12" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230e0f12'/><text x='50%25' y='62%25' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23e6e9ee'>DH</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script>
     document.documentElement.classList.add('js');
-    try { if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light-theme'); } catch (e) {}
+    try { var t = localStorage.getItem('theme'); if (t === 'light' || (!t && matchMedia('(prefers-color-scheme: light)').matches)) document.documentElement.classList.add('light-theme'); } catch (e) {}
   </script>
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip" href="#sobre">Pular para o conteúdo</a>
 
-  <!-- NAVEGAÇÃO -->
-  <header class="nav" id="nav">
+  <header class="nav">
     <div class="container nav-inner">
       <a href="#inicio" class="logo">Diego Henrique</a>
       <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
@@ -49,207 +48,175 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="container hero-inner">
+    <div class="container">
       <div class="hero-copy">
         <span class="badge"><span class="dot"></span>Estudando Análise e Desenvolvimento de Sistemas na UNIP</span>
-        <span class="kicker">Olá, eu sou o</span>
+        <span class="eyebrow">Olá, eu sou o</span>
         <h1>Diego Henrique</h1>
         <p class="hero-role">Desenvolvedor Front-end</p>
-        <p class="hero-summary">Crio interfaces bonitas, rápidas e acessíveis, e gosto de cuidar de cada detalhe entre o design e o código.</p>
+        <p class="hero-summary">Crio interfaces bonitas, rápidas e acessíveis, e cuido de cada detalhe entre o design e o código.</p>
         <div class="hero-foot">
-          <p>23 anos, Granja Viana · Cotia, SP</p>
+          <p>Brasileiro, 23 anos, de Cotia, SP</p>
           <div class="socials">
-            <a href="https://github.com/DiegoHS2003" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://wa.me/5511993363365" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5z"/></svg>
-            </a>
-            <a href="mailto:diegohs2003@gmail.com" aria-label="E-mail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-            </a>
+            <a href="https://www.linkedin.com/in/diegohenrique-dev" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="https://github.com/DiegoHS2003" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://www.instagram.com/diegohenriquee.__/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="0.6" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://wa.me/5511993363365" target="_blank" rel="noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5z"/></svg></a>
+            <a href="mailto:diegohs2003@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
           </div>
         </div>
       </div>
-      <figure class="hero-photo">
-        <img src="img/diego-700.jpg" alt="Foto de Diego Henrique" width="700" height="958" />
-        <figcaption><span>Disponível para estágio</span><span class="dot"></span></figcaption>
-      </figure>
     </div>
     <a href="#sobre" class="scroll-hint">Rolar
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
     </a>
   </section>
 
-  <main id="conteudo">
+  <main>
     <!-- 01 SOBRE -->
-    <section class="section container" id="sobre">
-      <header class="section-head reveal">
-        <span class="num">01</span>
-        <h2>Sobre</h2>
-      </header>
-      <div class="about">
-        <div class="about-text reveal">
-          <p class="lead">Sou desenvolvedor front-end em formação e gosto de transformar ideias em experiências digitais que as pessoas tenham vontade de usar.</p>
-          <p>Meu foco é criar interfaces limpas, responsivas e visualmente marcantes, sempre com boas práticas, código versionado no Git e muita vontade de aprender. Curso Análise e Desenvolvimento de Sistemas na UNIP Alphaville e complemento a faculdade com cursos de front-end, TypeScript e React.</p>
-          <p>Já construí desde landing pages até um marketplace completo com testes automatizados, e hoje busco minha primeira oportunidade para crescer junto de um time.</p>
+    <section class="section" id="sobre">
+      <div class="container">
+        <p class="eyebrow num reveal">01</p>
+        <h2 class="reveal">Sobre</h2>
+        <div class="avatar reveal"><img src="img/diego-avatar.jpg" alt="Diego Henrique" width="320" height="320" /></div>
+        <div class="about">
+          <div class="about-text reveal">
+            <p>Brasileiro, 23 anos, estudante de Análise e Desenvolvimento de Sistemas na UNIP Alphaville. Sou apaixonado por front-end e por transformar ideias em interfaces que as pessoas tenham vontade de usar, com código limpo, responsivo e bem versionado.</p>
+            <p>Complemento a faculdade com cursos de front-end, TypeScript e React, e aprendo construindo: já fiz desde landing pages até um marketplace completo com testes automatizados, além de sites reais para clientes.</p>
+            <p>Hoje busco minha primeira oportunidade para crescer junto de um time. Gosto de ambientes onde dá para perguntar, errar, aprender rápido e entregar coisas bem feitas.</p>
+          </div>
+          <div class="values reveal">
+            <h3>Valores</h3>
+            <ol>
+              <li><span class="v-num">01</span><div><strong>Curiosidade</strong><p>Sempre aprendendo, sempre perguntando.</p></div></li>
+              <li><span class="v-num">02</span><div><strong>Cuidado com detalhes</strong><p>Espaçamento, contraste e movimento fazem diferença.</p></div></li>
+              <li><span class="v-num">03</span><div><strong>Proatividade</strong><p>Não espero o problema crescer para agir.</p></div></li>
+              <li><span class="v-num">04</span><div><strong>Trabalho em equipe</strong><p>Comunicação clara e vontade de somar com o time.</p></div></li>
+              <li><span class="v-num">05</span><div><strong>Adaptabilidade</strong><p>Encarar tecnologia nova como oportunidade.</p></div></li>
+            </ol>
+          </div>
         </div>
-        <ol class="values reveal">
-          <li><span class="v-num">01</span><div><strong>Curiosidade</strong><p>Sempre aprendendo, sempre perguntando o porquê das coisas.</p></div></li>
-          <li><span class="v-num">02</span><div><strong>Cuidado com detalhes</strong><p>Espaçamento, contraste e movimento fazem diferença.</p></div></li>
-          <li><span class="v-num">03</span><div><strong>Proatividade</strong><p>Não espero o problema crescer para agir.</p></div></li>
-          <li><span class="v-num">04</span><div><strong>Trabalho em equipe</strong><p>Comunicação clara e vontade de somar com o time.</p></div></li>
-          <li><span class="v-num">05</span><div><strong>Adaptabilidade</strong><p>Encaro tecnologia nova como oportunidade, não obstáculo.</p></div></li>
-        </ol>
       </div>
     </section>
 
     <!-- 02 HABILIDADES -->
-    <section class="section container" id="habilidades">
-      <header class="section-head reveal">
-        <span class="num">02</span>
-        <h2>Habilidades</h2>
-      </header>
-      <dl class="skills reveal">
-        <div><dt>Linguagens</dt><dd>HTML5 <i>·</i> CSS3 <i>·</i> JavaScript <i>·</i> TypeScript</dd></div>
-        <div><dt>Frameworks &amp; Bibliotecas</dt><dd>React <i>·</i> TanStack Router &amp; Query <i>·</i> Tailwind CSS <i>·</i> shadcn/ui</dd></div>
-        <div><dt>Testes</dt><dd>Playwright <i>·</i> testes visuais <i>·</i> acessibilidade com axe</dd></div>
-        <div><dt>Ferramentas</dt><dd>Git <i>·</i> GitHub <i>·</i> VS Code <i>·</i> Figma <i>·</i> Vite <i>·</i> Vercel</dd></div>
-        <div><dt>Práticas</dt><dd>Design responsivo <i>·</i> HTML semântico <i>·</i> Acessibilidade <i>·</i> Performance</dd></div>
-        <div><dt>Competências</dt><dd>Comunicação <i>·</i> Liderança <i>·</i> Criatividade <i>·</i> Proatividade</dd></div>
-      </dl>
+    <section class="section" id="habilidades">
+      <div class="container">
+        <p class="eyebrow num reveal">02</p>
+        <h2 class="reveal">Habilidades</h2>
+        <div class="skills">
+          <div class="skill reveal"><span class="eyebrow">Linguagens</span><p>TypeScript · JavaScript · HTML5 · CSS3</p></div>
+          <div class="skill reveal"><span class="eyebrow">Frameworks &amp; Bibliotecas</span><p>React · TanStack Router &amp; Query · Tailwind CSS · shadcn/ui</p></div>
+          <div class="skill reveal"><span class="eyebrow">Testes</span><p>Playwright · Testes visuais · axe (acessibilidade)</p></div>
+          <div class="skill reveal"><span class="eyebrow">Deploy &amp; Hospedagem</span><p>Vercel · Cloudflare · GitHub</p></div>
+          <div class="skill reveal"><span class="eyebrow">Práticas</span><p>Design responsivo · HTML semântico · Acessibilidade · SEO</p></div>
+          <div class="skill reveal"><span class="eyebrow">Ferramentas</span><p>Git · VS Code · Figma · Vite</p></div>
+        </div>
+      </div>
     </section>
 
     <!-- 03 PROJETOS -->
-    <section class="section container" id="projetos">
-      <header class="section-head reveal">
-        <span class="num">03</span>
-        <h2>Projetos em Destaque</h2>
-      </header>
-
-      <article class="project project-featured reveal">
-        <a class="project-media" href="https://github.com/DiegoHS2003/nft-marketplace" target="_blank" rel="noreferrer" tabindex="-1">
-          <img src="img/projetos/nft.jpg" alt="Tela inicial do marketplace de NFTs Kurio" loading="lazy" width="960" height="600" />
-        </a>
-        <div class="project-body">
-          <p class="project-meta">React <i>·</i> TypeScript <i>·</i> TanStack <i>·</i> Tailwind <i>·</i> Playwright</p>
-          <h3>Kurio, marketplace de NFTs</h3>
-          <p>Teste técnico com catálogo, filtros, favoritos, carrinho, checkout com carteira simulada e atualizações em tempo real via Socket.IO. API 100% simulada com MSW e testes E2E, visuais e de acessibilidade.</p>
-          <div class="project-links">
-            <a href="https://github.com/DiegoHS2003/nft-marketplace" target="_blank" rel="noreferrer">Código <span>↗</span></a>
-          </div>
+    <section class="section" id="projetos">
+      <div class="container">
+        <p class="eyebrow num reveal">03</p>
+        <h2 class="reveal">Projetos em Destaque</h2>
+        <div class="projects">
+          <article class="project reveal">
+            <div>
+              <h3>Kurio, marketplace de NFTs</h3>
+              <p class="meta">React · TypeScript · TanStack · Tailwind · Playwright</p>
+            </div>
+            <div>
+              <p>Teste técnico. Marketplace com catálogo, filtros, favoritos, carrinho, checkout com carteira simulada e atualizações em tempo real via Socket.IO. API 100% simulada com MSW e testes E2E, visuais e de acessibilidade.</p>
+              <div class="links">
+                <a href="https://github.com/DiegoHS2003/nft-marketplace" target="_blank" rel="noreferrer">Código ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div>
+              <h3>Spider-Man: Um Novo Dia</h3>
+              <p class="meta">HTML · CSS · JavaScript</p>
+            </div>
+            <div>
+              <p>Projeto pessoal. Landing page de lançamento de filme, com trailer, animações e layout com recortes arredondados.</p>
+              <div class="links">
+                <a href="https://dev-art-spider-man.vercel.app" target="_blank" rel="noreferrer">Acessar ↗</a>
+                <a href="https://github.com/DiegoHS2003/devArt_spiderMan" target="_blank" rel="noreferrer">Código ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div>
+              <h3>Gabriella Rodrigues Advocacia</h3>
+              <p class="meta">HTML · CSS · JavaScript · Cloudflare · SEO</p>
+            </div>
+            <div>
+              <p>Cliente real. Site institucional de uma advogada em São Paulo, com áreas de atuação, contato pelo WhatsApp, domínio próprio e otimização para o Google.</p>
+              <div class="links">
+                <a href="https://gabriellarodrigues.adv.br" target="_blank" rel="noreferrer">Acessar ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <div class="projects">
-        <article class="project reveal">
-          <a class="project-media" href="https://dev-art-spider-man.vercel.app" target="_blank" rel="noreferrer" tabindex="-1">
-            <img src="img/projetos/spiderman.jpg" alt="Landing page do filme Spider-Man: Um Novo Dia" loading="lazy" width="960" height="600" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">HTML <i>·</i> CSS <i>·</i> JavaScript</p>
-            <h3>Spider-Man: Um Novo Dia</h3>
-            <p>Landing page de lançamento de filme, com trailer, animações e layout com recortes arredondados.</p>
-            <div class="project-links">
-              <a href="https://dev-art-spider-man.vercel.app" target="_blank" rel="noreferrer">Acessar <span>↗</span></a>
-              <a href="https://github.com/DiegoHS2003/devArt_spiderMan" target="_blank" rel="noreferrer">Código <span>↗</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project reveal">
-          <a class="project-media" href="https://github.com/DiegoHS2003/hdc-host" target="_blank" rel="noreferrer" tabindex="-1">
-            <img src="img/projetos/hdc.jpg" alt="Site da empresa de hospedagem hDC Host" loading="lazy" width="960" height="600" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">HTML <i>·</i> CSS</p>
-            <h3>hDC Host</h3>
-            <p>Site institucional para uma empresa de hospedagem, com banner, serviços e tabela de preços.</p>
-            <div class="project-links">
-              <a href="https://github.com/DiegoHS2003/hdc-host" target="_blank" rel="noreferrer">Código <span>↗</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project reveal">
-          <a class="project-media" href="https://github.com/DiegoHS2003/blog-template" target="_blank" rel="noreferrer" tabindex="-1">
-            <img src="img/projetos/blog.jpg" alt="Modelo de blog com HTML semântico" loading="lazy" width="960" height="600" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">HTML semântico <i>·</i> CSS</p>
-            <h3>Blog Semântico</h3>
-            <p>Modelo de blog focado em HTML semântico e acessível, com busca, categorias e tags.</p>
-            <div class="project-links">
-              <a href="https://github.com/DiegoHS2003/blog-template" target="_blank" rel="noreferrer">Código <span>↗</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project reveal">
-          <a class="project-media" href="https://github.com/DiegoHS2003/login-page-insta" target="_blank" rel="noreferrer" tabindex="-1">
-            <img src="img/projetos/insta.jpg" alt="Recriação da página de login do Instagram" loading="lazy" width="960" height="600" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">HTML <i>·</i> CSS <i>·</i> Flexbox</p>
-            <h3>Login do Instagram</h3>
-            <p>Recriação da página de login do Instagram para praticar layout com Flexbox e detalhes de interface.</p>
-            <div class="project-links">
-              <a href="https://github.com/DiegoHS2003/login-page-insta" target="_blank" rel="noreferrer">Código <span>↗</span></a>
-            </div>
-          </div>
-        </article>
       </div>
-
-      <p class="more reveal"><a href="https://github.com/DiegoHS2003?tab=repositories" target="_blank" rel="noreferrer">Ver todos os repositórios no GitHub <span>↗</span></a></p>
     </section>
 
     <!-- 04 FORMAÇÃO -->
-    <section class="section container" id="formacao">
-      <header class="section-head reveal">
-        <span class="num">04</span>
-        <h2>Formação &amp; Idiomas</h2>
-      </header>
-      <div class="edu">
-        <article class="edu-item reveal">
-          <span class="edu-mark">UNIP</span>
-          <div>
-            <h3>Análise e Desenvolvimento de Sistemas</h3>
-            <p>Universidade Paulista · Alphaville</p>
+    <section class="section" id="formacao">
+      <div class="container">
+        <p class="eyebrow num reveal">04</p>
+        <h2 class="reveal">Formação &amp; Cursos</h2>
+        <div class="edu">
+          <div class="edu-col reveal">
+            <h3 class="col-label">Formação</h3>
+            <div class="edu-item">
+              <span class="mark">UNIP</span>
+              <div>
+                <h4>Análise e Desenvolvimento de Sistemas</h4>
+                <p>UNIP · Alphaville, SP</p>
+                <span class="status"><span class="dot"></span>Em andamento</span>
+              </div>
+            </div>
           </div>
-        </article>
-        <article class="edu-item reveal">
-          <span class="edu-mark">UD</span>
-          <div>
-            <h3>Desenvolvimento Front-end</h3>
-            <p>Udemy · HTML, CSS, JavaScript, TypeScript e React</p>
+          <div class="edu-col reveal">
+            <h3 class="col-label">Cursos</h3>
+            <div class="edu-item">
+              <span class="mark">UD</span>
+              <div>
+                <h4>Desenvolvimento Front-end</h4>
+                <p>Udemy</p>
+                <p class="small">HTML · CSS · JavaScript · TypeScript · React</p>
+              </div>
+            </div>
           </div>
-        </article>
-        <article class="edu-item langs reveal">
-          <span class="edu-mark">Aa</span>
-          <div>
-            <h3>Idiomas</h3>
-            <ul>
-              <li><span>Português</span><em>Nativo</em></li>
-              <li><span>Inglês</span><em>Intermediário</em></li>
-              <li><span>Espanhol</span><em>Intermediário</em></li>
-            </ul>
-          </div>
-        </article>
+        </div>
+        <div class="langs reveal">
+          <span class="eyebrow">Idiomas</span>
+          <ul>
+            <li><strong>Português</strong> · Nativo</li>
+            <li><strong>Inglês</strong> · Intermediário</li>
+            <li><strong>Espanhol</strong> · Intermediário</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 05 CONTATO -->
-    <section class="section container contact" id="contato">
-      <header class="section-head reveal">
-        <span class="num">05</span>
-        <h2>Diga olá</h2>
-      </header>
-      <div class="contact-body reveal">
-        <p>Estou aberto a estágios, freelas e colaborações. A melhor forma de falar comigo é por e-mail ou WhatsApp, respondo todas as mensagens.</p>
-        <a class="big-mail" href="mailto:diegohs2003@gmail.com">diegohs2003@gmail.com</a>
-        <div class="contact-links">
-          <a href="https://wa.me/5511993363365" target="_blank" rel="noreferrer">WhatsApp · 11 99336-3365 <span>↗</span></a>
-          <a href="https://github.com/DiegoHS2003" target="_blank" rel="noreferrer">GitHub · DiegoHS2003 <span>↗</span></a>
+    <section class="section" id="contato">
+      <div class="container">
+        <p class="eyebrow num reveal">05</p>
+        <h2 class="reveal">Diga olá</h2>
+        <p class="contact-text reveal">A melhor forma de falar comigo é por e-mail ou WhatsApp. Leio todas as mensagens e respondo pessoalmente.</p>
+        <a class="mail reveal" href="mailto:diegohs2003@gmail.com">diegohs2003@gmail.com</a>
+        <div class="contact-row reveal">
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/diegohenrique-dev" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="https://github.com/DiegoHS2003" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://www.instagram.com/diegohenriquee.__/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="0.6" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://wa.me/5511993363365" target="_blank" rel="noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5z"/></svg></a>
+          </div>
+          <a class="wpp" href="https://wa.me/5511993363365" target="_blank" rel="noreferrer">11 99336-3365</a>
         </div>
       </div>
     </section>
@@ -257,9 +224,20 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>Projetado e desenvolvido por Diego Henrique</p>
-      <p class="footer-tech">HTML <i>·</i> CSS <i>·</i> JavaScript <i>·</i> Vercel</p>
-      <p>© <span id="year">2026</span></p>
+      <div>
+        <p class="footer-title">Projetado e desenvolvido por Diego Henrique</p>
+        <p class="footer-sub">Com a ajuda das tecnologias abaixo</p>
+        <p class="footer-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span></p>
+      </div>
+      <div class="footer-right">
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/diegohenrique-dev" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="https://github.com/DiegoHS2003" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://www.instagram.com/diegohenriquee.__/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="0.6" fill="currentColor" stroke="none"/></svg></a>
+          <a href="mailto:diegohs2003@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+        </div>
+        <p class="footer-sub">© <span id="year">2026</span> Diego Henrique. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
 </body>
