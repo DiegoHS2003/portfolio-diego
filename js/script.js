@@ -1,72 +1,72 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Toggle theme functionality
-  const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.classList.add('js');
 
-  if (currentTheme === 'light') {
-    document.documentElement.classList.add('light-theme');
-    themeToggle.textContent = 'Modo escuro';
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+
+  // Tema claro/escuro (salvo no navegador)
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    const isLight = root.classList.toggle('light-theme');
+    try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (e) {}
+  });
+
+  // Menu mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  const closeMenu = () => {
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menu');
+  };
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  });
+  navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+  // Animação de entrada ao rolar
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('visible'));
   }
 
-  themeToggle.addEventListener('click', () => {
-    const isLight = document.documentElement.classList.toggle('light-theme');
-    themeToggle.textContent = isLight ? 'Modo escuro' : 'Modo claro';
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  });
-
-  // Animação de entrada para cards
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  // Link ativo no menu conforme a seção visível
+  const links = [...navLinks.querySelectorAll('a')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
       }
     });
-  }, observerOptions);
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach((s) => spy.observe(s));
 
-  // Aplicar animação inicial
-  const cards = document.querySelectorAll('.skill-item, .stat');
-  cards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-  });
+  // Brilho do hero acompanha o mouse levemente
+  const heroBg = document.querySelector('.hero-bg');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (heroBg && !reduce) {
+    window.addEventListener('pointermove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 60;
+      const y = (e.clientY / window.innerHeight - 0.5) * 60;
+      heroBg.style.setProperty('--mx', x + 'px');
+      heroBg.style.setProperty('--my', y + 'px');
+    }, { passive: true });
+  }
 
-  // Efeito de hover nos botões
-  const buttons = document.querySelectorAll('.button');
-  buttons.forEach(button => {
-    button.addEventListener('mouseenter', () => {
-      const isLight = document.documentElement.classList.contains('light-theme');
-      if (button.classList.contains('button-primary')) {
-        button.style.boxShadow = isLight 
-          ? '0 25px 50px rgba(0, 0, 0, 0.2)' 
-          : '0 25px 50px rgba(255, 255, 255, 0.2)';
-      } else {
-        button.style.boxShadow = isLight 
-          ? '0 25px 50px rgba(0, 0, 0, 0.1)' 
-          : '0 25px 50px rgba(255, 255, 255, 0.1)';
-      }
-    });
-    button.addEventListener('mouseleave', () => {
-      button.style.boxShadow = '';
-    });
-  });
-
-  // Smooth scroll para links internos
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
-  internalLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+  // Ano atual no rodapé
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 });
