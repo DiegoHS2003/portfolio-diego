@@ -204,7 +204,7 @@ h1, h2, h3, h4, p { margin: 0; }
   overflow: hidden;
   margin-bottom: 48px;
 }
-.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: grayscale(1) contrast(1.05); }
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: grayscale(1) contrast(1.08) brightness(1.12); }
 .about {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 418px;
